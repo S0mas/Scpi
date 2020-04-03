@@ -1,8 +1,5 @@
-#include "../TEST_DEFINITIONS.h"
-#ifdef SCPI_INTERPRETER_TESTS
-#pragma once
 #include "gtest/gtest.h"
-#include "scpiParser.h"
+#include "../scpiParser.h"
 
 TEST(ScpiArgsParser, parseHex) {
 	EXPECT_EQ(ScpiArgsParser::parseArg("#h0x14").get<unsigned long long>(), 0x14);
@@ -236,4 +233,3 @@ TEST(ScpiParser, parseDeeperCmdWith3ArgsOneAreList) {
 	EXPECT_EQ(parsedData.args[2].get<std::vector<unsigned long long>>(), std::vector<unsigned long long>({0, 1, 2, 3, 4, 5 ,6 }));
 	
 }
-#endif//#ifdef SCPI_INTERPRETER_TESTS

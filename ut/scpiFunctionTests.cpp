@@ -1,9 +1,6 @@
-#include "../TEST_DEFINITIONS.h"
-#ifdef SCPI_INTERPRETER_TESTS
-#pragma once
 #include "gtest/gtest.h"
-#include "scpiFunction.h"
-#include "typedefs.h"
+#include "../scpiFunction.h"
+#include "../typedefs.h"
 
 int foo(const std::vector<ScpiArg>& args) {
 	return NO_ERROR;
@@ -60,4 +57,3 @@ TEST(scpiFunction, invalidArgsTypesError) {
 	arg2.set<signed long long>(-1999);
 	EXPECT_EQ(sf.run({ arg1, arg2 }), ERR_100_DATA_TYPE);
 }
-#endif//#ifdef SCPI_INTERPRETER_TESTS

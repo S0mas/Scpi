@@ -1,8 +1,5 @@
-#include "../TEST_DEFINITIONS.h"
-#ifdef SCPI_INTERPRETER_TESTS
-#pragma once
 #include "gtest/gtest.h"
-#include "buVariant.h"
+#include "../buVariant.h"
 
 std::string testGlobal;
 int counter = 0;
@@ -147,5 +144,3 @@ TEST(buVariant, getTypeId) {
 	EXPECT_NE(variant.getTypeId(), typeid(std::string).hash_code());
 	EXPECT_EQ(variant.getTypeId(), typeid(int).hash_code());
 }
-
-#endif//#ifdef SCPI_INTERPRETER_TESTS

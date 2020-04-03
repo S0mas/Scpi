@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ScpiInterpreter", "ScpiInterpreter.vcxproj", "{D360A360-0047-4913-B84D-CBEB0D1B2DBA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Unittests", "ut\Unittests.vcxproj", "{6D3E6F50-1F18-49A5-B1A9-70810ED5D896}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D360A360-0047-4913-B84D-CBEB0D1B2DBA}.Debug|x64.ActiveCfg = Debug|x64
+		{D360A360-0047-4913-B84D-CBEB0D1B2DBA}.Debug|x64.Build.0 = Debug|x64
+		{D360A360-0047-4913-B84D-CBEB0D1B2DBA}.Release|x64.ActiveCfg = Release|x64
+		{D360A360-0047-4913-B84D-CBEB0D1B2DBA}.Release|x64.Build.0 = Release|x64
+		{6D3E6F50-1F18-49A5-B1A9-70810ED5D896}.Debug|x64.ActiveCfg = Debug|x64
+		{6D3E6F50-1F18-49A5-B1A9-70810ED5D896}.Debug|x64.Build.0 = Debug|x64
+		{6D3E6F50-1F18-49A5-B1A9-70810ED5D896}.Release|x64.ActiveCfg = Release|x64
+		{6D3E6F50-1F18-49A5-B1A9-70810ED5D896}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA517DA6-8F39-40C7-B56E-CEE8F1B4EABD}
+	EndGlobalSection
+EndGlobal

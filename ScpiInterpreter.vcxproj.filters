@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="headers">
+      <UniqueIdentifier>{f18ff0e0-bbc8-45ed-8223-92b860b64800}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources">
+      <UniqueIdentifier>{8e6e596c-abeb-4101-9df1-e07db0bd305f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="scpiCmdNode.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="scpiExec.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="scpiFunction.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="scpiParser.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="scpiVisitors.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="typedefs.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="buVariant.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="scpiCmdNode.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="scpiExec.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="scpiParser.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,9 +1,6 @@
-#include "../TEST_DEFINITIONS.h"
-#ifdef SCPI_INTERPRETER_TESTS
-#pragma once
 #include "gtest/gtest.h"
-#include "scpiExec.h"
-#include "scpiVisitors.h"
+#include "../scpiExec.h"
+#include "../scpiVisitors.h"
 
 std::string output;
 unsigned long long normalParam;
@@ -75,4 +72,3 @@ TEST(scpiExecTests, cmdNotFound) {
 	EXPECT_FALSE(exec.parseAndExecuteCommand("DOWN"));
 	EXPECT_EQ(exec.getErrorCode(), ERR_100_COMMAND_ERROR);
 }
-#endif//#ifdef SCPI_INTERPRETER_TESTS

@@ -1,8 +1,5 @@
-#include "../TEST_DEFINITIONS.h"
-#ifdef SCPI_INTERPRETER_TESTS
-#pragma once
 #include "gtest/gtest.h"
-#include "utils.h"
+#include "../utils.h"
 
 TEST(utils, isVowel) {
 	EXPECT_TRUE(isVowel('a'));
@@ -219,7 +216,3 @@ TEST(utils, concatenateOneTokenParts3) {
 	EXPECT_EQ(concatenateTokens.size(), 3);
 	EXPECT_EQ(concatenateTokens[1], fullToken);
 }
-#endif//#ifdef SCPI_INTERPRETER_TESTS
-
-
-

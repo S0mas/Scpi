@@ -1,8 +1,5 @@
-#include "../TEST_DEFINITIONS.h"
-#ifdef SCPI_INTERPRETER_TESTS
-#pragma once
 #include "gtest/gtest.h"
-#include "scpiCmdNode.h"
+#include "../scpiCmdNode.h"
 #include <iostream>
 
 static int bar1(const std::vector<ScpiArg>& args) {
@@ -150,5 +147,3 @@ TEST(ScpiCmdNodeTests, findCmdWithInNameParam) {
 	EXPECT_EQ(node.findCmd({ std::string("first"), std::string("deeper063") }), nullptr);
 	EXPECT_EQ(node.findCmd({ std::string("first"), std::string("deeper01") }), nullptr);
 }
-
-#endif//#ifdef SCPI_INTERPRETER_TESTS
