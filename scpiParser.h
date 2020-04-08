@@ -3,10 +3,12 @@
 #include "typedefs.h"
 
 #include <string>
+#include <map>
 #include <vector>
 
 class ScpiArgsParser {
 	struct ScpiArgsRecognizer {
+		static inline std::map<std::string, ScpiArg> mnemonics;	
 		static bool isHexFormat(const std::string& str) noexcept;
 		static bool isOctFormat(const std::string& str) noexcept;
 		static bool isBinFormat(const std::string& str) noexcept;
@@ -16,7 +18,6 @@ class ScpiArgsParser {
 		static bool isList(const std::string& str) noexcept;
 		static bool isMnemonic(const std::string& str) noexcept;
 	};
-
 	static ScpiArg parseHex(const std::string& str);
 	static ScpiArg parseOct(const std::string& str);
 	static ScpiArg parseBin(const std::string& str);
@@ -26,6 +27,7 @@ class ScpiArgsParser {
 	static ScpiArg parseList(const std::string& str);
 	static ScpiArg parseMnemonic(const std::string& str);
 public:
+	static void addMnemonic(std::string const& str, ScpiArg const& mappedArg) noexcept;
 	static ScpiArg parseArg(const std::string& str);
 	class EmptyArgDataException : public std::exception {};
 	class InvalidArgDataException : public std::exception {};

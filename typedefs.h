@@ -4,8 +4,7 @@
 #include <string>
 #include <vector>
 
-#define Args std::string, unsigned long long, signed long long, double, std::vector<unsigned long long>
-using ScpiArg = buVariant<Args>;
+using ScpiArg = buVariant<std::string, unsigned long long, signed long long, double, std::vector<unsigned long long>>;
 
 struct ParsedScpiData {
 	std::vector<std::string> nodesNames;

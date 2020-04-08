@@ -6,7 +6,7 @@ void ScpiExec::showData(const ParsedScpiData& data) const noexcept {
 	for (auto const& name : data.nodesNames)
 		std::cout << name << " ";
 	for (auto const& arg : data.args)
-		visit<ScpiArgVisitor, Args>(ScpiArgVisitor{}, arg);
+		visit<ScpiArgVisitor, std::string, unsigned long long, signed long long, double, std::vector<unsigned long long>>(ScpiArgVisitor{}, arg);
 	std::cout << std::endl;
 }
 

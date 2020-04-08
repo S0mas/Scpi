@@ -46,8 +46,14 @@ bool ScpiArgsParser::ScpiArgsRecognizer::isList(const std::string& str) noexcept
 }
 
 bool ScpiArgsParser::ScpiArgsRecognizer::isMnemonic(const std::string& str) noexcept {
-	bool isMnemonic = false;
-	return isMnemonic;
+	for (auto const& mnemonic : mnemonics)
+		if (mnemonic.first == str)
+			return true;
+	return false;
+}
+
+void ScpiArgsParser::addMnemonic(const std::string& str, ScpiArg const& mappedArg) noexcept {
+	ScpiArgsRecognizer::mnemonics[str] = mappedArg;
 }
 
 ScpiArg ScpiArgsParser::parseHex(const std::string& str) {
@@ -122,11 +128,7 @@ ScpiArg ScpiArgsParser::parseList(const std::string& str) {
 }
 
 ScpiArg ScpiArgsParser::parseMnemonic(const std::string& str) {
-	throw std::exception();
-	//TODO
-	ScpiArg arg;
-	arg.set<double>(0.0);
-	return arg;
+	return ScpiArgsRecognizer::mnemonics[str];
 }
 
 ScpiArg ScpiArgsParser::parseArg(const std::string& toParse) {
